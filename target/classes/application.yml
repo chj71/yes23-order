@@ -41,6 +41,16 @@ server:
 api:
   pay:
     url: http://localhost:8083
+
+feign:
+  hystrix:
+    enabled: true
+
+hystrix:
+  command:
+    # 전역설정
+    default:
+      execution.isolation.thread.timeoutInMilliseconds: 610
 ---
 
 spring:
@@ -70,3 +80,4 @@ spring:
 api:
   pay:
     url: http://localhost:8083
+
